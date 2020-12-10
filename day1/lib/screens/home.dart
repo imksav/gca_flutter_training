@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text("This is title"),
+        title: Text("This is title - ImKsav"),
         actions: [
           Icon(Icons.notification_important),
           SizedBox(width: 20),
