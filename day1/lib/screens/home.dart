@@ -33,7 +33,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         children: [
           GestureDetector(
             onTap: () {
-              print("Working");
               setState(() {
                 gestureValue = "OnTap Called";
               });
@@ -75,6 +74,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     );
   }
 }
+
+void handleGesture(String providedGesture) {}
 
 class MyStatelessWidget extends StatelessWidget {
   String changeValue = "Initial value";
