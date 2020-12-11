@@ -1,3 +1,4 @@
+import 'package:day1/screens/multiplewidgets.dart';
 import 'package:flutter/material.dart';
 
 class MyCounterApp extends StatefulWidget {
@@ -11,21 +12,32 @@ class _MyCounterAppState extends State<MyCounterApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: _actionButtons(),
-      appBar: AppBar(
-        title: Text("My Counter App"),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Ink(
-          color: Colors.amber,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text("You have pressed floating action button"),
-              Text("$_counterValue"),
-            ],
-          ),
+      appBar: _appBar(),
+      endDrawer: _drawer(),
+      drawer: _drawer(),
+      body: _body(),
+    );
+  }
+
+  Widget _appBar() {
+    return AppBar(title: Text("My Counter App"));
+  }
+
+  Widget _drawer() {
+    return Drawer(child: MultipleWidgets());
+  }
+
+  Widget _body() {
+    return Center(
+      child: Ink(
+        color: Colors.amber,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text("You have pressed floating action button"),
+            Text("$_counterValue"),
+          ],
         ),
       ),
     );

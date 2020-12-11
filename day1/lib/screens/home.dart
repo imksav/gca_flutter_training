@@ -73,9 +73,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
     );
   }
-}
 
-void handleGesture(String providedGesture) {}
+  void handleGesture(String providedGesture) {
+    setState(() {
+      gestureValue = providedGesture;
+    });
+  }
+}
 
 class MyStatelessWidget extends StatelessWidget {
   String changeValue = "Initial value";
