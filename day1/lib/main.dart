@@ -1,4 +1,5 @@
 import 'package:day1/screens/firstpage.dart';
+import 'package:day1/screens/networkcalled.dart';
 import 'package:day1/screens/secondpage.dart';
 import 'package:day1/screens/thirdpage.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         "/thirdPage": (context) => ThirdPage(),
       },
       debugShowCheckedModeBanner: false,
-      home: FirstPage(),
+      home: NetworkCall(),
     );
   }
 }
