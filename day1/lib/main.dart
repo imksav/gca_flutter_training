@@ -1,10 +1,13 @@
-import 'package:day1/screens/first_ui_home.dart';
-import 'package:day1/screens/settings.dart';
+import 'package:day1/screens/detailspage.dart';
+import 'package:day1/screens/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
+    routes: {
+      "/details": (context) => DetailsPage(),
+    },
     debugShowCheckedModeBanner: false,
-    home: FirstUIHome(),
+    home: HomePage(),
   ));
 }
